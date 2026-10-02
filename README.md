@@ -79,9 +79,21 @@ The initial API must be proven by multiple real consumers:
 
 Reflex should be the first game migration because its integration layer is compact. Grimcellar then validates richer projections and Dihor GameKit use. RacingLab validates high-frequency input/timing and packaging diagnostics.
 
+## Available contract client
+
+`@partybeam/game-sdk` `0.1.0-alpha.0` now provides the Game Contract v1 client and TypeScript models. See [client usage, provenance and migration](docs/game-contract-client.md).
+
+```text
+npm ci
+npm run check
+npm pack
+```
+
+The package has no runtime dependencies. Browser games bundle the ES module into their sandboxed surfaces. CI verifies Node 20/22, declarations and package contents. Package schemas/build/check tooling remain G03/G04 work; permanent game and Platform adoption remain subsequent tracked migrations.
+
 ## Planned package shape
 
-Exact package names are implementation decisions, but the intended conceptual split is:
+The initial contract package uses root `src/` for its ES module and declarations. The intended future conceptual split is:
 
 ```text
 packages/

@@ -5,9 +5,9 @@ Status: **Active**
 ## G01 — bootstrap repository and boundaries
 
 - [x] README/AGENTS/architecture/roadmap.
-- [ ] choose package/workspace layout.
-- [ ] add baseline test/typecheck/build tooling.
-- [ ] document versioning/changelog policy.
+- [x] choose package/workspace layout (one root contract package; split tooling only when needed).
+- [x] add baseline test/typecheck/package tooling and Node 20/22 CI.
+- [x] document versioning/changelog policy in `docs/game-contract-client.md` and `CHANGELOG.md`.
 
 ## G02 — extract Game Contract client
 
@@ -24,7 +24,7 @@ Required:
 - timeout/dispose behavior;
 - typed current v1 models.
 
-Proof: Reflex can consume it without keeping its local client.
+Implemented in SDK `0.1.0-alpha.0`. Proof: all 94 tests from fresh Reflex `main` pass with its local client replaced by the packed SDK in an isolated snapshot. See `docs/game-contract-client.md` and `npm run prove:reflex`. Permanent adoption and removal in the actual Reflex repository remain G05; no device E2E is claimed here.
 
 ## G03 — extract package v1 schemas and deterministic primitives
 
