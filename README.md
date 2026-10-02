@@ -89,7 +89,7 @@ npm run check
 npm pack
 ```
 
-The package has no runtime dependencies. Browser games bundle the ES module into their sandboxed surfaces. CI verifies Node 20/22, declarations and package contents. SDK `0.1.0-alpha.2` also exports unchanged package-v1 schemas, Node descriptor/hash primitives and a reusable conformance corpus, with generated-package proof from all three games; see [package contract and validation boundaries](docs/package-contract-v1.md). Whole-package build/check is next (G04); permanent consumer adoption and cross-validator conformance remain tracked migrations.
+The browser client has no runtime dependencies. Browser games bundle its ES module into their sandboxed surfaces. CI verifies Node 20/22, declarations and package contents. SDK `0.1.0-alpha.3` also exports package-v1 schemas, descriptor/hash primitives, conformance fixtures and Node producer tools. The installed `partybeam package build/check` CLI and typed APIs provide deterministic unsigned packages, semantic/integrity checks and optional signing; see [producer workflow](docs/package-producer.md) and [contract boundaries](docs/package-contract-v1.md). Node tooling uses pinned Ajv against bundled schemas offline. Permanent consumer adoption and cross-validator conformance remain tracked migrations, starting with G05 Reflex.
 
 ## Planned package shape
 

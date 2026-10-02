@@ -1,0 +1,47 @@
+{
+  "sdkVersion": "0.1.0-alpha.3",
+  "platformCommit": "c30c2531f44688cda82c87e1c6d5f5be7bed837b",
+  "node": "v25.6.1",
+  "consumers": [
+    {
+      "repository": "PawelWielga/PartyBeam.Game.Reflex",
+      "commit": "e4942db3bebec429d8ae9eee612de8218643ba7c",
+      "sourceOuterSha256": "8748f094e0f89f3555a646b811f081cd5de99d3c6700beab845dc66d72e21fea",
+      "rebuiltOuterSha256": "e1344b704f0ebfd2f759f8a4cb3d1fd8056012c75b292e721559109a5852a2d0",
+      "rebuiltManifestSha256": "e9aaca9948872a51fb27ae30d7e66d62ce02e80efa4e2768c8ba60fb9a9efefe",
+      "rebuiltPackageSha256": "bed9f92973cba9ce95c218b596c418907d198887917619354249c1a53d02ef70",
+      "sizeBytes": 2357704,
+      "deterministicRebuild": true,
+      "gameContentUnchanged": true,
+      "platformUnsignedVerified": true
+    },
+    {
+      "repository": "PawelWielga/PartyBeam.Game.Grimcellar",
+      "commit": "ab8ed074e952d4691d86f7b37ae96a887b3d77a4",
+      "sourceOuterSha256": "f97a4d2589394630b4b0f1f1e27e9250b1e47efdc7ea48aeaaa577e8f65283fd",
+      "rebuiltOuterSha256": "99f880230418608e90cd8ce6a9c25558f11f19874f2b2c6013d92cc1fc42c7ea",
+      "rebuiltManifestSha256": "cb8568cf1b22d1151b3d2dbab75a0155eda55d240eb5b490a8273d2961240b90",
+      "rebuiltPackageSha256": "da1ffe8dfdcb5ecf67fdc6fd037d0ea15cac3d963999582b174cd230e9470263",
+      "sizeBytes": 839215,
+      "deterministicRebuild": true,
+      "gameContentUnchanged": true,
+      "platformUnsignedVerified": true
+    },
+    {
+      "repository": "PawelWielga/PartyBeam.Game.RacingLab",
+      "commit": "229f2ea0c7f9583545b4722fb678099e36ed1081",
+      "sourceOuterSha256": "7216e08355c523d237a895fc48b2c9c5eee0dba4ec0c931bd4586cf78e375cc3",
+      "rebuiltOuterSha256": "8467111cff5909384e643e51ba6c35e1110557f254bef00eff4fd4b998a104ab",
+      "rebuiltManifestSha256": "34bac39701d733d94f496422d2aa69a12f7289897760c1328651f8db3e518fe8",
+      "rebuiltPackageSha256": "c811205f9f7957adf097006c0a760c6ac52d6f57c8249f2536018ff0d9b278ad",
+      "sizeBytes": 4294006,
+      "deterministicRebuild": true,
+      "gameContentUnchanged": true,
+      "platformUnsignedVerified": true
+    }
+  ],
+  "signedReflexVerifiedByPlatform": true,
+  "signedProofKey": "ephemeral P-256 test key, no publisher trust claim",
+  "sdkTests": 151,
+  "platformDirectXunitTests": 80
+}

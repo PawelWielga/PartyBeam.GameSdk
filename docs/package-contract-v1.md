@@ -28,6 +28,8 @@ The historical Catalog envelope fixture hashes the CRLF rendition of its manifes
 
 ## Validation boundaries and remaining migration
 
+G04 is now implemented in SDK `0.1.0-alpha.3`; see [package producer build/check](package-producer.md). The `package-v1` primitives retain their original scope, while `package-tools` adds full producer validation and archive/signature checking. The following describes why schema/descriptor acceptance alone remains insufficient.
+
 JSON Schema checks structure, required fields, kind cardinality, path spelling and hash formats. Descriptor primitives reject malformed hashes, unsupported kinds, unsafe paths and artifact collisions. They do not validate a whole manifest or archive. Schema validation alone does not detect duplicate component IDs, cross-field range/locale/capability inconsistencies, missing ZIP entries, payload tampering or publisher trust.
 
 G04 owns whole-package producer build/check, semantic validation, archive safety and optional signing. A valid unsigned envelope is not authorization to execute or publish a package. Signed profiles still require P-256/P1363 verification and trusted publisher identity; Platform and Catalog retain runtime/publication policy. G05–G09 own actual consumer adoption and the cross-repository proof gate. No consumer implementation is removed by this extraction.

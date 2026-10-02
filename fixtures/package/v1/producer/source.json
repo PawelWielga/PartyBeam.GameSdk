@@ -1,0 +1,15 @@
+{
+  "fixture": "unsigned.partybeam",
+  "outerSha256": "f8dd6fddd1fa608ceb2529cc4519dd11bba9eed7b2e7beac8c60edad46bd19de",
+  "manifestSha256": "ec5b1d2e30ad3e78e166a492941fb7462757ae39c2ebed457b7277b89b827552",
+  "packageSha256": "2d7eac18a2abe7addce95c04e3e82a9cf396e5daf98520561b1b4cf63492ebc4",
+  "independentReader": "Python standard-library zipfile + hashlib",
+  "checks": [
+    "CRC",
+    "fixed timestamps",
+    "STORED compression",
+    "ordinal entry order",
+    "manifest/artifact/descriptor hashes",
+    "nested entry points"
+  ]
+}

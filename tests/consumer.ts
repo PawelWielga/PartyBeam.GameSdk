@@ -1,5 +1,12 @@
 import { createGameContractV1Client, type PartyBeamSession, type PartyBeamRuntimeSignal } from "@partybeam/game-sdk";
 import { buildPackageDescriptor, createUnsignedIntegrityEnvelope, type DescriptorComponent } from "@partybeam/game-sdk/package-v1";
+import { buildPackage, checkPackage, type PackageManifest } from "@partybeam/game-sdk/package-tools";
+declare const producerManifest: PackageManifest;
+const produced = buildPackage({ manifest: producerManifest, components: { tv: { "index.html": new Uint8Array() } } });
+const checkedProfile: "signed" | "unsigned" = checkPackage(produced.bytes, { allowUnsigned: true }).profile;
+const verifiedComponentHash: string = checkPackage(produced.bytes, { allowUnsigned: true }).manifest.components[0]!.sha256;
+void verifiedComponentHash;
+void checkedProfile;
 const components: readonly DescriptorComponent[] = [{ kind: "tv", artifactPath: "tv.zip", sha256: "a".repeat(64) }];
 const descriptor: Uint8Array = buildPackageDescriptor("a".repeat(64), components);
 const schemaVersion: 1 = createUnsignedIntegrityEnvelope(descriptor, components).schemaVersion;
