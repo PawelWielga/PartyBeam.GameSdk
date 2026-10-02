@@ -74,7 +74,7 @@ Preview.1 stays immutable. Game-owned cover remains Grimcellar #13, preview.2 pu
 
 Completed with [RacingLab PR #29](https://github.com/PawelWielga/PartyBeam.Game.RacingLab/pull/29), merge `dd653dd28bfba932d8ea2ada5ceda8da363140b2`. Preview.2 pins SDK alpha.4, integrates the existing runtime/telemetry draft stack into main and removes its private bridge/ZIP/descriptor/signature algorithms. RacingLab owns only game metadata/policy, controls, simulation, presentation and bounded telemetry. Nullable SDK timing evidence is unavailable, never zero latency.
 
-Proof: 49 tests on Node22/25, including actual Vite controller bundles with native/iframe host doubles and 1,200 SDK input events; strict typecheck/both builds; identical consecutive unsigned archives across Node versions; actual unsigned/test-key-signed CLI checks and Platform verifier acceptance; zero npm audit vulnerabilities. [Detailed evidence](https://github.com/PawelWielga/PartyBeam.Game.RacingLab/blob/main/docs/gamesdk-migration.md). No physical-device, WebGL, real LAN latency, publisher trust or catalog publication proof is inferred. RacingLab #5 remains blocked for A -> C/D by Platform #206. G08 GameCatalog is also complete below; next is G09 Platform/cross-validator convergence.
+Proof: 49 tests on Node22/25, including actual Vite controller bundles with native/iframe host doubles and 1,200 SDK input events; strict typecheck/both builds; identical consecutive unsigned archives across Node versions; actual unsigned/test-key-signed CLI checks and Platform verifier acceptance; zero npm audit vulnerabilities. [Detailed evidence](https://github.com/PawelWielga/PartyBeam.Game.RacingLab/blob/main/docs/gamesdk-migration.md). No physical-device, WebGL, real LAN latency, publisher trust or catalog publication proof is inferred. RacingLab #5 retains unimplemented A -> C/D instrumentation and physical-device acceptance. Platform #206 is resolved by merged PR #317 (`151f03e843f325f13c0f670a524e011ecef7aa12`); mapped instrumentation requires a host containing that fix. G08 GameCatalog is also complete below; next is G09 Platform/cross-validator convergence.
 
 ## G08 — migrate GameCatalog contract source
 
@@ -85,6 +85,25 @@ Proof: existing 13 Catalog suites plus the SDK corpus (58 manifest, 15 envelope,
 ## G09 — converge Platform runtime/verifier
 
 Platform should implement/consume the same public contract definitions without making GameSdk depend on Platform internals.
+
+Completed bounded Platform stages: #358 pins the same alpha.4 artifact as
+GameCatalog; #360 executes all 58 manifest/15 envelope mutations and resolves
+explicit-null signature handling; #317 fixes mapping invalidation ordering;
+#362 executes six shared authoritative runtime checks through the real .NET
+parser/bridge (session request/response, unsupported-method error, timed input,
+presence, resource pressure and mapping invalidation). Package/runtime tests
+share a hash-verified artifact reader rather than copied fixture definitions.
+The #362 validation ran 252 tests (GameContract 83, GamePackages 169), zero
+failures/skips. SDK optional null/omitted presence timing and bridge-lifetime
+mapping IDs are documented normalization points. No production runtime mismatch
+was found in those six checks.
+
+G09 remains open. Next: the shared controller-projection fixture through the
+controller adapter and real SDK-client/Platform exchange with broader request/type
+boundaries; production schema-source cutover/removal and structural boundary
+proof beyond the finite corpus remain. No live browser/Android/device E2E,
+full v1 method conformance or physical performance conclusion is inferred.
+See [Platform evidence](https://github.com/PawelWielga/PartyBeam.Platform/blob/main/docs/gamesdk-conformance.md).
 
 ## G10 — conformance matrix
 
