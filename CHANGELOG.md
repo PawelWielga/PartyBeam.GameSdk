@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-alpha.4
+
+- Avoid ES2022 Object.hasOwn in the browser client for older Android WebViews.
+- Preserve own-property validation and Game Contract v1 wire behavior.
+
 ## 0.1.0-alpha.3
 
 - Add the Node-only typed `package-tools` API and installed `partybeam package build/check` CLI.

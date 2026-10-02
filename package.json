@@ -1,6 +1,6 @@
 {
   "name": "@partybeam/game-sdk",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "description": "Game-facing PartyBeam Game Contract v1 client and types",
   "type": "module",
   "engines": {

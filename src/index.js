@@ -103,7 +103,7 @@ export function createGameContractV1Client(options = {}) {
     try { serialize(message, MAX_RESPONSE_BYTES); } catch { return; }
     if (message.type === "contract.response") {
       if (!active || message.requestId !== active.id || typeof message.ok !== "boolean") return;
-      if (message.ok && !Object.hasOwn(message, "payload")) return;
+      if (message.ok && !Object.prototype.hasOwnProperty.call(message, "payload")) return;
       if (!message.ok && (!isObject(message.error) || typeof message.error.code !== "string")) return;
       const request = active;
       active = null;
@@ -112,7 +112,7 @@ export function createGameContractV1Client(options = {}) {
       else request.reject(new GameContractRequestError(message.error.code, request.id));
       dispatchNext();
     } else if (message.type === "contract.event" && typeof message.event === "string"
-        && Object.hasOwn(message, "payload")) {
+        && Object.prototype.hasOwnProperty.call(message, "payload")) {
       for (const handler of [...(subscribers.get(message.event) ?? [])]) handler(message.payload);
     }
   }
