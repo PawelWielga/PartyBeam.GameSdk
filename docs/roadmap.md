@@ -24,7 +24,7 @@ Required:
 - timeout/dispose behavior;
 - typed current v1 models.
 
-Implemented in SDK `0.1.0-alpha.0`. Proof: all 94 tests from fresh Reflex `main` pass with its local client replaced by the packed SDK in an isolated snapshot. See `docs/game-contract-client.md` and `npm run prove:reflex`. Permanent adoption and removal in the actual Reflex repository remain G05; no device E2E is claimed here.
+Implemented in SDK `0.1.0-alpha.0`. Proof: all 94 tests from fresh Reflex `main` pass with its local client replaced by the packed SDK in an isolated snapshot. See `docs/game-contract-client.md` and `npm run prove:reflex`. Permanent Reflex adoption/removal is now complete through G05 below; this initial proof does not claim device E2E.
 
 ## G03 — extract package v1 schemas and deterministic primitives
 
@@ -41,7 +41,7 @@ Required:
 
 Do not change v1 wire/container behavior accidentally during extraction.
 
-Completed in SDK `0.1.0-alpha.2`: unchanged schemas, Node descriptor/hash/path primitives, pinned Platform/Catalog fixtures, a reusable data-only valid/invalid corpus and real generated Reflex/Grimcellar/RacingLab package proof. RacingLab evidence comes from the explicitly pinned active PR #26 stack, not its bootstrap-only main. See `docs/package-contract-v1.md` and `fixtures/package/v1/generated/proof.json`. Full archive build/check and semantic validation are the next task, G04; actual consumer adoption remains G05–G09.
+Completed in SDK `0.1.0-alpha.2`: unchanged schemas, Node descriptor/hash/path primitives, pinned Platform/Catalog fixtures, a reusable data-only valid/invalid corpus and real generated Reflex/Grimcellar/RacingLab package proof. RacingLab evidence comes from the explicitly pinned active PR #26 stack, not its bootstrap-only main. See `docs/package-contract-v1.md` and `fixtures/package/v1/generated/proof.json`. Full archive build/check and semantic validation are implemented by G04 below; consumer adoption follows G05–G09.
 
 ## G04 — package builder/check CLI
 
@@ -58,15 +58,17 @@ build game surfaces
 
 Game repositories still own their game-specific metadata/assets.
 
-Completed in `0.1.0-alpha.3`: installed `partybeam package build/check`, typed Node APIs, semantic validation, deterministic unsigned archives, bounded archive checking and P-256/P1363 signing/verification. Packed CLI tests and real SDK rebuilds of all three G03 consumer packages pass; Platform accepts the generated unsigned packages and a test-key signed package. See `docs/package-producer.md`. G05 Reflex adoption is next; consumer copies remain until each migration is proven.
+Completed in `0.1.0-alpha.3`: installed `partybeam package build/check`, typed Node APIs, semantic validation, deterministic unsigned archives, bounded archive checking and P-256/P1363 signing/verification. Packed CLI tests and real SDK rebuilds of all three G03 consumer packages pass; Platform accepts the generated unsigned packages and a test-key signed package. See `docs/package-producer.md`. Reflex and Grimcellar adoption is complete below; other consumer copies remain until each migration is proven.
 
 ## G05 — migrate Reflex
 
-Replace local Game Contract/package infrastructure and preserve existing behavior/tests.
+Completed with [Reflex PR #20](https://github.com/PawelWielga/PartyBeam.Game.Reflex/pull/20), merge `f61c93bfc27069ad789d067f968022c2668b4eef`. Reflex alpha.2 pins SDK alpha.4, imports the client directly and uses SDK archive build/check. Private client/ZIP/descriptor code is deleted. Proof: 97 tests on Node20/22/25, deterministic producer output, real browser bundles and Platform full verifier. SDK alpha.4 removes the newer `Object.hasOwn` browser requirement (SDK PR #14). Catalog publication/physical E2E remain Reflex #9.
 
 ## G06 — migrate Grimcellar
 
-Validate projections, lifecycle, Board/Dice consumption and package production.
+Completed with [Grimcellar PR #16](https://github.com/PawelWielga/PartyBeam.Game.Grimcellar/pull/16), merge `2e2d57e3965963f87b6a20808e62b0c61a22ba92`. Preview.2 pins SDK alpha.4, removes its private bridge/client/producer algorithms and keeps direct Board/Dice preview.2 dependencies. Controller input carries only type/payload; host-owned sequencing follows the canonical contract. Proof: 23 tests on Node22/25 including real Vite controller through native/iframe bridges, typecheck/both builds, identical unsigned archive on both Node versions, independent archive audit and Platform verification of real unsigned/test-key-signed archives.
+
+Preview.1 stays immutable. Game-owned cover remains Grimcellar #13, preview.2 publication is GameCatalog #25 and physical PC/Android TV E2E remains Grimcellar #9. No device/publication evidence is inferred from deterministic tests. Next architecture task is G07 RacingLab.
 
 ## G07 — migrate RacingLab
 
