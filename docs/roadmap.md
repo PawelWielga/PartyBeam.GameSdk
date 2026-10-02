@@ -58,6 +58,8 @@ build game surfaces
 
 Game repositories still own their game-specific metadata/assets.
 
+Completed in `0.1.0-alpha.3`: installed `partybeam package build/check`, typed Node APIs, semantic validation, deterministic unsigned archives, bounded archive checking and P-256/P1363 signing/verification. Packed CLI tests and real SDK rebuilds of all three G03 consumer packages pass; Platform accepts the generated unsigned packages and a test-key signed package. See `docs/package-producer.md`. G05 Reflex adoption is next; consumer copies remain until each migration is proven.
+
 ## G05 — migrate Reflex
 
 Replace local Game Contract/package infrastructure and preserve existing behavior/tests.

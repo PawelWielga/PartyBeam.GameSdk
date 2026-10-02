@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.0-alpha.3
+
+- Add the Node-only typed `package-tools` API and installed `partybeam package build/check` CLI.
+- Build deterministic STORED component/container archives with fixed timestamps and canonical manifest bytes.
+- Validate manifest semantics, exact-byte integrity, nested archive safety/bounds and entry points.
+- Support optional P-256/P1363 signing and explicit unsigned verification; publisher trust policy stays external.
+- Validate packed CLI workflows, independent archive/hash fixtures and three real consumer rebuilds against Platform.
+- Node tooling now depends on pinned Ajv for bundled offline schemas; the browser client remains dependency-free.
+- Package-v1/wire schemas remain unchanged. New producer output needs a new game release identity; permanent migrations start at G05.
+
 ## 0.1.0-alpha.2
 
 - Ship data-only valid/invalid schema, descriptor and integrity vectors.
