@@ -68,11 +68,13 @@ Completed with [Reflex PR #20](https://github.com/PawelWielga/PartyBeam.Game.Ref
 
 Completed with [Grimcellar PR #16](https://github.com/PawelWielga/PartyBeam.Game.Grimcellar/pull/16), merge `2e2d57e3965963f87b6a20808e62b0c61a22ba92`. Preview.2 pins SDK alpha.4, removes its private bridge/client/producer algorithms and keeps direct Board/Dice preview.2 dependencies. Controller input carries only type/payload; host-owned sequencing follows the canonical contract. Proof: 23 tests on Node22/25 including real Vite controller through native/iframe bridges, typecheck/both builds, identical unsigned archive on both Node versions, independent archive audit and Platform verification of real unsigned/test-key-signed archives.
 
-Preview.1 stays immutable. Game-owned cover remains Grimcellar #13, preview.2 publication is GameCatalog #25 and physical PC/Android TV E2E remains Grimcellar #9. No device/publication evidence is inferred from deterministic tests. Next architecture task is G07 RacingLab.
+Preview.1 stays immutable. Game-owned cover remains Grimcellar #13, preview.2 publication is GameCatalog #25 and physical PC/Android TV E2E remains Grimcellar #9. No device/publication evidence is inferred from deterministic tests. G07 RacingLab is now complete below; next architecture task is G08 GameCatalog.
 
 ## G07 — migrate RacingLab
 
-Validate high-frequency input/timing models and producer verification.
+Completed with [RacingLab PR #29](https://github.com/PawelWielga/PartyBeam.Game.RacingLab/pull/29), merge `dd653dd28bfba932d8ea2ada5ceda8da363140b2`. Preview.2 pins SDK alpha.4, integrates the existing runtime/telemetry draft stack into main and removes its private bridge/ZIP/descriptor/signature algorithms. RacingLab owns only game metadata/policy, controls, simulation, presentation and bounded telemetry. Nullable SDK timing evidence is unavailable, never zero latency.
+
+Proof: 49 tests on Node22/25, including actual Vite controller bundles with native/iframe host doubles and 1,200 SDK input events; strict typecheck/both builds; identical consecutive unsigned archives across Node versions; actual unsigned/test-key-signed CLI checks and Platform verifier acceptance; zero npm audit vulnerabilities. [Detailed evidence](https://github.com/PawelWielga/PartyBeam.Game.RacingLab/blob/main/docs/gamesdk-migration.md). No physical-device, WebGL, real LAN latency, publisher trust or catalog publication proof is inferred. RacingLab #5 remains blocked for A -> C/D by Platform #206. Next architecture task is G08 GameCatalog.
 
 ## G08 — migrate GameCatalog contract source
 
