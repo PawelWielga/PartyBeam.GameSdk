@@ -1,0 +1,12 @@
+{
+  "request": { "type": "contract.request", "requestId": "fixture-1", "method": "session.get", "payload": {} },
+  "session": { "gameId": "partybeam.reflex", "gameVersion": "0.1.0-alpha.1", "contractVersion": "1.0.0", "roster": [{ "playerId": "p1", "displayName": "Ada", "isConnected": true }] },
+  "error": { "code": "contract.methodUnsupported" },
+  "events": [
+    { "type": "contract.event", "event": "input", "payload": { "sequence": 1, "playerId": "p1", "type": "game.press", "payload": {}, "normalizedTimestampMilliseconds": 100, "authorityReceiveTimestampMilliseconds": 102, "timingQuality": { "roundTripMilliseconds": 4, "jitterMilliseconds": 1, "uncertaintyMilliseconds": 2, "isTrusted": true } } },
+    { "type": "contract.event", "event": "player.presence", "payload": { "playerId": "p1", "state": "reconnecting", "timingQuality": null } },
+    { "type": "contract.event", "event": "controller.projection", "payload": { "revision": 1, "type": "game.state", "payload": { "phase": "playing" } } },
+    { "type": "contract.event", "event": "runtime.signal", "payload": { "kind": "resourcePressure", "payload": { "active": true, "code": "runtime.resourcePressure", "kind": "memory" } } },
+    { "type": "contract.event", "event": "timing.mapping.invalidated", "payload": { "mappingId": "mapping-1", "generation": 1, "reason": "standby" } }
+  ]
+}
