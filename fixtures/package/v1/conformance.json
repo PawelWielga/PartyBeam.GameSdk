@@ -658,7 +658,7 @@
             "artifactPath"
           ],
           "operation": "set",
-          "value": "ab.zip"
+          "value": "a\u007fb.zip"
         }
       ],
       "schemaValid": false,
@@ -674,7 +674,7 @@
             "entryPoint"
           ],
           "operation": "set",
-          "value": "ab.zip"
+          "value": "a\u007fb.zip"
         }
       ],
       "schemaValid": false
@@ -1060,13 +1060,13 @@
         },
         {
           "kind": "tv",
-          "artifactPath": "Ă©.zip",
+          "artifactPath": "\u00e9.zip",
           "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
         }
       ],
       "valid": true,
-      "expectedUtf8": "partybeam-package-content-v1\nmanifest:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\ncomponent:tv:Z.zip2:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\ncomponent:tv:z.zip:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\ncomponent:tv:Ă©.zip:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n",
-      "expectedSha256": "9e53cb36f0c28ea0e923c5351f59c4754d2912fb85a89402a6aaa89f1fadc6b9"
+      "expectedUtf8": "partybeam-package-content-v1\nmanifest:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\ncomponent:tv:Z.zip2:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\ncomponent:tv:z.zip:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\ncomponent:tv:\u00e9.zip:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n",
+      "expectedSha256": "9aeb4322c88f8fbee031c5339b40a38a107046ceb950b4f5939206468bafb357"
     },
     {
       "id": "bad-manifest-hash",
@@ -1084,7 +1084,7 @@
         },
         {
           "kind": "tv",
-          "artifactPath": "Ă©.zip",
+          "artifactPath": "\u00e9.zip",
           "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
         }
       ],
