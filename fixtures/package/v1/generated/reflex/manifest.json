@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "gameId": "partybeam.reflex",
+  "version": "0.1.0-alpha.1",
+  "publisher": {
+    "id": "partybeam",
+    "displayName": "PartyBeam"
+  },
+  "gameContract": {
+    "minimumVersion": "1.0.0",
+    "maximumVersionExclusive": "2.0.0"
+  },
+  "players": {
+    "minimum": 2,
+    "maximum": 8
+  },
+  "controllerTopology": "onePhonePerPlayer",
+  "components": [
+    {
+      "id": "tv",
+      "kind": "tv",
+      "releaseVersion": "0.1.0-alpha.1",
+      "artifactPath": "components/tv.zip",
+      "entryPoint": "tv/index.html",
+      "sha256": "abbf6b2b6ab5c3eb7854ab405fdd272f5b035ed88c0fe818b082a2ed9077b3a2",
+      "runtimeLocales": [
+        "en",
+        "pl"
+      ]
+    },
+    {
+      "id": "android-controller",
+      "kind": "androidController",
+      "releaseVersion": "0.1.0-alpha.1",
+      "artifactPath": "components/android.zip",
+      "entryPoint": "controller/index.html",
+      "sha256": "b9e84f4ba24d3624360a3afcefe7b493e9d3fb795e363b6f1425f3f4cab81ffc",
+      "runtimeLocales": [
+        "en",
+        "pl"
+      ]
+    },
+    {
+      "id": "browser-controller",
+      "kind": "browserController",
+      "releaseVersion": "0.1.0-alpha.1",
+      "artifactPath": "components/browser.zip",
+      "entryPoint": "controller/index.html",
+      "sha256": "b9e84f4ba24d3624360a3afcefe7b493e9d3fb795e363b6f1425f3f4cab81ffc",
+      "runtimeLocales": [
+        "en",
+        "pl"
+      ]
+    }
+  ],
+  "catalogLocales": [
+    "en",
+    "pl"
+  ],
+  "catalog": {
+    "canonicalTitle": "Reflex",
+    "localized": {
+      "en": {
+        "shortDescription": "A fast reaction game built to validate PartyBeam timing and local multiplayer.",
+        "instructions": "Watch the shared screen and press only after the cue."
+      },
+      "pl": {
+        "shortDescription": "Szybka gra refleksowa służąca do walidacji timingu i lokalnego multiplayera PartyBeam.",
+        "instructions": "Patrz na wspólny ekran i naciśnij dopiero po sygnale."
+      }
+    },
+    "artwork": [
+      {
+        "id": "cover",
+        "kind": "cover",
+        "artifactPath": "catalog/cover.png",
+        "sha256": "a84a44c6913081c62afa3e3ef056001f89805603408db86e35cb57622f22c13d"
+      }
+    ]
+  },
+  "capabilities": {
+    "required": [],
+    "optional": [
+      "haptics"
+    ]
+  },
+  "network": {
+    "outboundAllowlist": []
+  },
+  "supportsStandbyResume": true
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "gameId": "partybeam.racinglab",
+  "version": "0.1.0-preview.1",
+  "publisher": {
+    "id": "partybeam",
+    "displayName": "PartyBeam"
+  },
+  "gameContract": {
+    "minimumVersion": "1.0.0",
+    "maximumVersionExclusive": "2.0.0"
+  },
+  "players": {
+    "minimum": 1,
+    "maximum": 4
+  },
+  "controllerTopology": "onePhonePerPlayer",
+  "components": [
+    {
+      "id": "tv",
+      "kind": "tv",
+      "releaseVersion": "0.1.0-preview.1",
+      "artifactPath": "components/tv.zip",
+      "entryPoint": "index.html",
+      "sha256": "32804cb3a87f6e1ec7b43b9fa132c1135a6ab694f4657d4d81d6dab58d5677f7",
+      "runtimeLocales": [
+        "en",
+        "pl"
+      ]
+    },
+    {
+      "id": "android-controller",
+      "kind": "androidController",
+      "releaseVersion": "0.1.0-preview.1",
+      "artifactPath": "components/android.zip",
+      "entryPoint": "index.html",
+      "sha256": "e75e3699c9242a4fc41d3fcc3245f80004dbc0ed7a13dbb411b043ff0d3a7bfb",
+      "runtimeLocales": [
+        "en",
+        "pl"
+      ]
+    }
+  ],
+  "catalogLocales": [
+    "en",
+    "pl"
+  ],
+  "catalog": {
+    "canonicalTitle": "Racing Lab",
+    "localized": {
+      "en": {
+        "shortDescription": "Race with tilt steering and measure PartyBeam responsiveness.",
+        "instructions": "Hold the phone in landscape, tilt to steer, and use the large throttle and brake buttons."
+      },
+      "pl": {
+        "shortDescription": "Ścigaj się sterując przechyleniem telefonu i mierz responsywność PartyBeam.",
+        "instructions": "Trzymaj telefon poziomo, przechylaj go aby skręcać i używaj dużych przycisków gazu oraz hamulca."
+      }
+    },
+    "artwork": [
+      {
+        "id": "cover",
+        "kind": "cover",
+        "artifactPath": "catalog/cover.png",
+        "sha256": "6612563cedb468e0cd21eea54d1adb1744c8737a9adb3aebfd50c944c77945df"
+      }
+    ]
+  },
+  "capabilities": {
+    "required": [
+      "gyroscope"
+    ],
+    "optional": []
+  },
+  "network": {
+    "outboundAllowlist": []
+  },
+  "supportsStandbyResume": false
+}

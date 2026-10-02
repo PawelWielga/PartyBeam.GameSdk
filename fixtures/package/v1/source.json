@@ -28,5 +28,15 @@
     "repository": "PawelWielga/PartyBeam.GameCatalog",
     "commit": "eb1015bcbda2b45649b2a5c78b19bfa4f58e71ff",
     "path": "fixtures/v1/package-contract/signature.json"
+  },
+  "fixtures/package/v1/catalog-lf-manifest.json": {
+    "repository": "PawelWielga/PartyBeam.GameCatalog",
+    "commit": "f143d83303dac651fafb253b6165786616c4c694",
+    "path": "fixtures/v1/package-contract/manifest.json"
+  },
+  "fixtures/package/v1/catalog-lf-envelope.json": {
+    "repository": "PawelWielga/PartyBeam.GameCatalog",
+    "commit": "f143d83303dac651fafb253b6165786616c4c694",
+    "path": "fixtures/v1/package-contract/signature.json"
   }
 }

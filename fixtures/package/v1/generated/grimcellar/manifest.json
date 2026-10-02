@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "gameId": "partybeam.grimcellar",
+  "version": "0.1.0-preview.1",
+  "publisher": {
+    "id": "partybeam",
+    "displayName": "PartyBeam"
+  },
+  "gameContract": {
+    "minimumVersion": "1.0.0",
+    "maximumVersionExclusive": "2.0.0"
+  },
+  "players": {
+    "minimum": 1,
+    "maximum": 4
+  },
+  "controllerTopology": "onePhonePerPlayer",
+  "components": [
+    {
+      "id": "tv",
+      "kind": "tv",
+      "releaseVersion": "0.1.0-preview.1",
+      "artifactPath": "components/tv.zip",
+      "entryPoint": "index.html",
+      "sha256": "45bdf6c3bc306fac7ca4551f14f52e81817e4ad9275125c2a65ad4fc869c546c",
+      "runtimeLocales": [
+        "en",
+        "pl"
+      ]
+    },
+    {
+      "id": "android-controller",
+      "kind": "androidController",
+      "releaseVersion": "0.1.0-preview.1",
+      "artifactPath": "components/android.zip",
+      "entryPoint": "index.html",
+      "sha256": "6bdaa222fc1e24cfe28c7c0c30df1ec60e0c7753ed3c13f60c0301d94378ad34",
+      "runtimeLocales": [
+        "en",
+        "pl"
+      ]
+    }
+  ],
+  "catalogLocales": [
+    "en",
+    "pl"
+  ],
+  "catalog": {
+    "canonicalTitle": "Grimcellar",
+    "localized": {
+      "en": {
+        "shortDescription": "Explore an endless dungeon together on one shared screen.",
+        "instructions": "Use your phone to move and resolve encounters while the dungeon stays on the shared screen."
+      },
+      "pl": {
+        "shortDescription": "Wspólnie przemierzajcie nieskończony loch na jednym ekranie.",
+        "instructions": "Steruj ruchem i walką z telefonu, a loch obserwujcie na wspólnym ekranie."
+      }
+    }
+  },
+  "capabilities": {
+    "required": [],
+    "optional": []
+  },
+  "network": {
+    "outboundAllowlist": []
+  },
+  "supportsStandbyResume": false
+}
