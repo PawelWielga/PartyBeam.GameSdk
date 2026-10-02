@@ -1,0 +1,1141 @@
+{
+  "formatVersion": 1,
+  "generated": [
+    "reflex",
+    "grimcellar",
+    "racinglab"
+  ],
+  "manifests": [
+    {
+      "id": "unchanged-three-surfaces",
+      "changes": [],
+      "schemaValid": true,
+      "descriptorValid": true
+    },
+    {
+      "id": "missing-schemaVersion",
+      "changes": [
+        {
+          "path": [
+            "schemaVersion"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-gameId",
+      "changes": [
+        {
+          "path": [
+            "gameId"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-version",
+      "changes": [
+        {
+          "path": [
+            "version"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-publisher",
+      "changes": [
+        {
+          "path": [
+            "publisher"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-gameContract",
+      "changes": [
+        {
+          "path": [
+            "gameContract"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-players",
+      "changes": [
+        {
+          "path": [
+            "players"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-controllerTopology",
+      "changes": [
+        {
+          "path": [
+            "controllerTopology"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-components",
+      "changes": [
+        {
+          "path": [
+            "components"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-catalogLocales",
+      "changes": [
+        {
+          "path": [
+            "catalogLocales"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-catalog",
+      "changes": [
+        {
+          "path": [
+            "catalog"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-capabilities",
+      "changes": [
+        {
+          "path": [
+            "capabilities"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-network",
+      "changes": [
+        {
+          "path": [
+            "network"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-supportsStandbyResume",
+      "changes": [
+        {
+          "path": [
+            "supportsStandbyResume"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-component-id",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "id"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-component-kind",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "kind"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-component-releaseVersion",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "releaseVersion"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-component-artifactPath",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-component-entryPoint",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-component-sha256",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "sha256"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-component-runtimeLocales",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "runtimeLocales"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsupported-version",
+      "changes": [
+        {
+          "path": [
+            "schemaVersion"
+          ],
+          "operation": "set",
+          "value": 2
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unknown-root-property",
+      "changes": [
+        {
+          "path": [
+            "unexpected"
+          ],
+          "operation": "set",
+          "value": true
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unknown-component-property",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "unexpected"
+          ],
+          "operation": "set",
+          "value": true
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-24",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": ""
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-25",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": ""
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-26",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "/tv.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-27",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "/tv.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-28",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "../tv.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-29",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "../tv.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-30",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "a/../b.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-31",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "a/../b.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-32",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "./tv.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-33",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "./tv.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-34",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "a//tv.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-35",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "a//tv.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-36",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "a/"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-37",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "a/"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-38",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "a\\tv.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-39",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "a\\tv.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-40",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "C:tv.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-41",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "C:tv.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-42",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "a\nb.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-43",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "a\nb.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-44",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "a\u0000b.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-45",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "a\u0000b.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsafe-artifact-46",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "a\u007fb.zip"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unsafe-entrypoint-47",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "entryPoint"
+          ],
+          "operation": "set",
+          "value": "a\u007fb.zip"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "malformed-component-hash",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "sha256"
+          ],
+          "operation": "set",
+          "value": "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "unknown-kind",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "kind"
+          ],
+          "operation": "set",
+          "value": "native"
+        }
+      ],
+      "schemaValid": false,
+      "descriptorValid": false
+    },
+    {
+      "id": "duplicate-tv-kind",
+      "changes": [
+        {
+          "path": [
+            "components",
+            1,
+            "kind"
+          ],
+          "operation": "set",
+          "value": "tv"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "no-tv",
+      "changes": [
+        {
+          "path": [
+            "components",
+            0,
+            "kind"
+          ],
+          "operation": "set",
+          "value": "browserController"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "duplicate-locale",
+      "changes": [
+        {
+          "path": [
+            "catalogLocales"
+          ],
+          "operation": "set",
+          "value": [
+            "en",
+            "en"
+          ]
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unknown-capability",
+      "changes": [
+        {
+          "path": [
+            "capabilities",
+            "required"
+          ],
+          "operation": "set",
+          "value": [
+            "nativeCode"
+          ]
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "case-colliding-artifacts",
+      "changes": [
+        {
+          "path": [
+            "components",
+            1,
+            "artifactPath"
+          ],
+          "operation": "set",
+          "value": "COMPONENTS/TV.ZIP"
+        }
+      ],
+      "schemaValid": true,
+      "descriptorValid": false
+    },
+    {
+      "id": "duplicate-component-id-needs-semantic-validator",
+      "changes": [
+        {
+          "path": [
+            "components",
+            1,
+            "id"
+          ],
+          "operation": "set",
+          "value": "tv"
+        }
+      ],
+      "schemaValid": true,
+      "descriptorValid": true
+    },
+    {
+      "id": "mixed-release-needs-semantic-validator",
+      "changes": [
+        {
+          "path": [
+            "components",
+            1,
+            "releaseVersion"
+          ],
+          "operation": "set",
+          "value": "99.0.0"
+        }
+      ],
+      "schemaValid": true,
+      "descriptorValid": true
+    },
+    {
+      "id": "reversed-player-range-needs-semantic-validator",
+      "changes": [
+        {
+          "path": [
+            "players",
+            "minimum"
+          ],
+          "operation": "set",
+          "value": 100
+        }
+      ],
+      "schemaValid": true,
+      "descriptorValid": true
+    }
+  ],
+  "envelopes": [
+    {
+      "id": "unsigned",
+      "changes": [],
+      "schemaValid": true,
+      "integrityValid": true
+    },
+    {
+      "id": "missing-schemaVersion",
+      "changes": [
+        {
+          "path": [
+            "schemaVersion"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-manifestSha256",
+      "changes": [
+        {
+          "path": [
+            "manifestSha256"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "missing-packageSha256",
+      "changes": [
+        {
+          "path": [
+            "packageSha256"
+          ],
+          "operation": "delete"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unsupported-version",
+      "changes": [
+        {
+          "path": [
+            "schemaVersion"
+          ],
+          "operation": "set",
+          "value": 2
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "unknown-property",
+      "changes": [
+        {
+          "path": [
+            "unexpected"
+          ],
+          "operation": "set",
+          "value": true
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "null-signature",
+      "changes": [
+        {
+          "path": [
+            "signature"
+          ],
+          "operation": "set",
+          "value": null
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "malformed-manifest-hash",
+      "changes": [
+        {
+          "path": [
+            "manifestSha256"
+          ],
+          "operation": "set",
+          "value": "bad"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "malformed-package-hash",
+      "changes": [
+        {
+          "path": [
+            "packageSha256"
+          ],
+          "operation": "set",
+          "value": "bad"
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "manifest-integrity-mismatch",
+      "changes": [
+        {
+          "path": [
+            "manifestSha256"
+          ],
+          "operation": "set",
+          "value": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "schemaValid": true,
+      "integrityValid": false
+    },
+    {
+      "id": "descriptor-integrity-mismatch",
+      "changes": [
+        {
+          "path": [
+            "packageSha256"
+          ],
+          "operation": "set",
+          "value": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "schemaValid": true,
+      "integrityValid": false
+    },
+    {
+      "id": "signed-shape-is-not-cryptographic-proof",
+      "changes": [
+        {
+          "path": [
+            "signature"
+          ],
+          "operation": "set",
+          "value": {
+            "algorithm": "ecdsa-p256-sha256-p1363",
+            "keyId": "fixture-key",
+            "valueBase64": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+          }
+        }
+      ],
+      "schemaValid": true,
+      "integrityValid": true
+    },
+    {
+      "id": "invalid-signature-algorithm",
+      "changes": [
+        {
+          "path": [
+            "signature"
+          ],
+          "operation": "set",
+          "value": {
+            "algorithm": "rsa",
+            "keyId": "fixture-key",
+            "valueBase64": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+          }
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "invalid-signature-keyId",
+      "changes": [
+        {
+          "path": [
+            "signature"
+          ],
+          "operation": "set",
+          "value": {
+            "algorithm": "ecdsa-p256-sha256-p1363",
+            "keyId": "",
+            "valueBase64": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+          }
+        }
+      ],
+      "schemaValid": false
+    },
+    {
+      "id": "invalid-signature-valueBase64",
+      "changes": [
+        {
+          "path": [
+            "signature"
+          ],
+          "operation": "set",
+          "value": {
+            "algorithm": "ecdsa-p256-sha256-p1363",
+            "keyId": "fixture-key",
+            "valueBase64": "short"
+          }
+        }
+      ],
+      "schemaValid": false
+    }
+  ],
+  "descriptors": [
+    {
+      "id": "ordinal-sort-and-lowercase-hashes",
+      "manifestSha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "components": [
+        {
+          "kind": "tv",
+          "artifactPath": "z.zip",
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        {
+          "kind": "tv",
+          "artifactPath": "Z.zip2",
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        {
+          "kind": "tv",
+          "artifactPath": "\u00e9.zip",
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        }
+      ],
+      "valid": true,
+      "expectedUtf8": "partybeam-package-content-v1\nmanifest:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\ncomponent:tv:Z.zip2:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\ncomponent:tv:z.zip:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\ncomponent:tv:\u00e9.zip:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n",
+      "expectedSha256": "9aeb4322c88f8fbee031c5339b40a38a107046ceb950b4f5939206468bafb357"
+    },
+    {
+      "id": "bad-manifest-hash",
+      "manifestSha256": "bad",
+      "components": [
+        {
+          "kind": "tv",
+          "artifactPath": "z.zip",
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        {
+          "kind": "tv",
+          "artifactPath": "Z.zip2",
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        {
+          "kind": "tv",
+          "artifactPath": "\u00e9.zip",
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        }
+      ],
+      "valid": false
+    },
+    {
+      "id": "null-component",
+      "manifestSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "components": [
+        null
+      ],
+      "valid": false
+    },
+    {
+      "id": "null-components",
+      "manifestSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "components": null,
+      "valid": false
+    },
+    {
+      "id": "unknown-kind",
+      "manifestSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "components": [
+        {
+          "kind": "native",
+          "artifactPath": "z.zip",
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        }
+      ],
+      "valid": false
+    },
+    {
+      "id": "case-collision",
+      "manifestSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "components": [
+        {
+          "kind": "tv",
+          "artifactPath": "z.zip",
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        {
+          "kind": "tv",
+          "artifactPath": "Z.ZIP",
+          "sha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        }
+      ],
+      "valid": false
+    }
+  ],
+  "bases": {
+    "manifest": "platform-manifest.json",
+    "envelope": "generated/reflex/envelope.json"
+  }
+}

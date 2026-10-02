@@ -41,7 +41,7 @@ Required:
 
 Do not change v1 wire/container behavior accidentally during extraction.
 
-SDK `0.1.0-alpha.1` extracts unchanged schemas, Node descriptor/hash/path primitives and Platform/Catalog fixtures. See `docs/package-contract-v1.md`. G03 remains open for real generated Reflex/Grimcellar/RacingLab package proof and a complete reusable valid/invalid fixture corpus; full archive build/check and semantic validation belong to G04.
+Completed in SDK `0.1.0-alpha.2`: unchanged schemas, Node descriptor/hash/path primitives, pinned Platform/Catalog fixtures, a reusable data-only valid/invalid corpus and real generated Reflex/Grimcellar/RacingLab package proof. RacingLab evidence comes from the explicitly pinned active PR #26 stack, not its bootstrap-only main. See `docs/package-contract-v1.md` and `fixtures/package/v1/generated/proof.json`. Full archive build/check and semantic validation are the next task, G04; actual consumer adoption remains G05–G09.
 
 ## G04 — package builder/check CLI
 

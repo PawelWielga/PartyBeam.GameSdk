@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-alpha.2
+
+- Ship data-only valid/invalid schema, descriptor and integrity vectors.
+- Prove real generated Reflex, Grimcellar and active-stack RacingLab packages against the packed SDK; record exact commits and generated manifest/descriptor bytes.
+- Add the repaired Catalog LF snapshot without rewriting historical CRLF fixture provenance.
+- Add isolated `prove:packages` tooling; no runtime dependency, schema or wire change.
+
 ## 0.1.0-alpha.1
 
 - Ship unchanged package-v1 manifest and integrity/signature schemas with pinned provenance.

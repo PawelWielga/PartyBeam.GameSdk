@@ -81,7 +81,7 @@ Reflex should be the first game migration because its integration layer is compa
 
 ## Available contract client
 
-`@partybeam/game-sdk` `0.1.0-alpha.0` now provides the Game Contract v1 client and TypeScript models. See [client usage, provenance and migration](docs/game-contract-client.md).
+`@partybeam/game-sdk` provides the Game Contract v1 client and TypeScript models. See [client usage, provenance and migration](docs/game-contract-client.md).
 
 ```text
 npm ci
@@ -89,7 +89,7 @@ npm run check
 npm pack
 ```
 
-The package has no runtime dependencies. Browser games bundle the ES module into their sandboxed surfaces. CI verifies Node 20/22, declarations and package contents. SDK `0.1.0-alpha.1` also exports unchanged package-v1 schemas and Node descriptor/hash primitives; see [package contract and validation boundaries](docs/package-contract-v1.md). Whole-package build/check remains G04; real consumer adoption and conformance remain tracked migrations.
+The package has no runtime dependencies. Browser games bundle the ES module into their sandboxed surfaces. CI verifies Node 20/22, declarations and package contents. SDK `0.1.0-alpha.2` also exports unchanged package-v1 schemas, Node descriptor/hash primitives and a reusable conformance corpus, with generated-package proof from all three games; see [package contract and validation boundaries](docs/package-contract-v1.md). Whole-package build/check is next (G04); permanent consumer adoption and cross-validator conformance remain tracked migrations.
 
 ## Planned package shape
 

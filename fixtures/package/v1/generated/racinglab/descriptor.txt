@@ -1,0 +1,4 @@
+partybeam-package-content-v1
+manifest:bf2443e3e02230e156ff108bbb5e41d771dd64079cbd326cc8919c61368f0033
+component:androidController:components/android.zip:e75e3699c9242a4fc41d3fcc3245f80004dbc0ed7a13dbb411b043ff0d3a7bfb
+component:tv:components/tv.zip:32804cb3a87f6e1ec7b43b9fa132c1135a6ab694f4657d4d81d6dab58d5677f7
