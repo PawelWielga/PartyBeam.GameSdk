@@ -113,7 +113,9 @@ export function readZip(input, overrides) {
     need((flags & 0x800) !== 0 || rawName.every(byte => byte < 128), "zip.name", "Non-ASCII names require UTF-8 flag.");
     const name = new TextDecoder("utf-8", { fatal: true, ignoreBOM: true }).decode(rawName);
     assertSafeArtifactPath(name);
-    need(((attributes >>> 16) & 0xf000) !== 0xa000 && (attributes & 0x10) === 0, "zip.link", "Links/directories are forbidden.");
+    const unixType = (attributes >>> 16) & 0xf000;
+    need((unixType === 0 || unixType === 0x8000) && (attributes & 0x10) === 0,
+      "zip.link", "Only regular file entries are allowed.");
     need(!seen.has(pathKey(name)), "zip.collision", `Entry paths collide: ${name}`); seen.add(pathKey(name));
     total += length;
     need(length <= limits.maxEntryBytes && total <= limits.maxTotalBytes, "zip.limit", "Decompression size limit exceeded.");
@@ -128,6 +130,9 @@ export function readZip(input, overrides) {
     need(dataEnd <= start, "zip.local", "Entry overlaps central directory.");
     let entryEnd = dataEnd;
     if (flags & 8) {
+      need([[14, crc], [18, compressed], [22, length]].every(([field, expected]) =>
+        bytes.readUInt32LE(local + field) === 0 || bytes.readUInt32LE(local + field) === expected),
+        "zip.local", "Invalid local data-descriptor placeholder.");
       span(dataEnd, 4);
       const descriptor = dataEnd + (bytes.readUInt32LE(dataEnd) === 0x08074b50 ? 4 : 0);
       span(descriptor, 12); entryEnd = descriptor + 12;

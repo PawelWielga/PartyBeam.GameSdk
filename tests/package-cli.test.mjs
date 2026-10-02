@@ -4,7 +4,7 @@ import { spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { generateKeyPairSync } from "node:crypto";
+import { createHash, generateKeyPairSync } from "node:crypto";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 test("packed CLI builds/checks offline, preserves outputs, verifies signing and rejects bad arguments", () => {
@@ -18,8 +18,19 @@ test("packed CLI builds/checks offline, preserves outputs, verifies signing and 
     return result.stdout;
   };
   const packed = JSON.parse(npm(["pack", root, "--json", "--pack-destination", cwd]))[0];
-  writeFileSync(join(cwd, "package.json"), '{"private":true,"type":"module"}\n');
-  npm(["install", "--offline", "--ignore-scripts", "--no-audit", "--no-fund", join(cwd, packed.filename)]);
+  const sdk = JSON.parse(readFileSync(join(root, "package.json")));
+  const sdkLock = JSON.parse(readFileSync(join(root, "package-lock.json")));
+  const specifier = `file:${packed.filename}`, dependencies = { [sdk.name]: specifier };
+  writeFileSync(join(cwd, "package.json"), JSON.stringify({ name: "sdk-cli-test", private: true, type: "module", dependencies }));
+  // npm ci caches tarballs, not necessarily registry packuments. Pin the entire
+  // production graph from the SDK lock so a fresh CI cache needs no metadata fetch.
+  const production = Object.fromEntries(Object.entries(sdkLock.packages).filter(([path, record]) => path && !record.dev));
+  writeFileSync(join(cwd, "package-lock.json"), JSON.stringify({ name: "sdk-cli-test", lockfileVersion: 3, requires: true,
+    packages: { "": { name: "sdk-cli-test", dependencies }, ...production,
+      [`node_modules/${sdk.name}`]: { version: sdk.version, resolved: specifier,
+        integrity: `sha512-${createHash("sha512").update(readFileSync(join(cwd, packed.filename))).digest("base64")}`,
+        dependencies: sdk.dependencies, bin: sdk.bin, engines: sdk.engines } } }));
+  npm(["ci", "--offline", "--ignore-scripts", "--no-audit", "--no-fund"]);
   assert.ok(existsSync(join(cwd, "node_modules/.bin", process.platform === "win32" ? "partybeam.cmd" : "partybeam")));
   const cliPath = join(cwd, "node_modules/@partybeam/game-sdk/bin/partybeam.mjs");
   const cli = (...args) => run([cliPath, "package", ...args]);

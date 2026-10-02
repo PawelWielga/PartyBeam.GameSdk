@@ -197,6 +197,8 @@ test("ZIP preflight prevents decompression bombs, links, overlapping records and
   const c1 = pair.indexOf(Buffer.from([0x50, 0x4b, 0x01, 0x02])), c2 = c1 + 46 + 5;
   for (const mutate of [
     b => { b.writeUInt32LE((0xa000 << 16) >>> 0, c1 + 38); },
+    b => { b.writeUInt32LE((0x1000 << 16) >>> 0, c1 + 38); },
+    b => { b.writeUInt32LE((0x4000 << 16) >>> 0, c1 + 38); },
     b => { b.writeUInt32LE(0, c2 + 42); },
     b => { b[c2 + 46] = 97; b[36 + 30] = 97; },
   ]) { const bytes = Buffer.from(pair); mutate(bytes); assert.throws(() => readZip(bytes)); }
