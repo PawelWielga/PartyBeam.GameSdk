@@ -1,4 +1,9 @@
 import { createGameContractV1Client, type PartyBeamSession, type PartyBeamRuntimeSignal } from "@partybeam/game-sdk";
+import { buildPackageDescriptor, createUnsignedIntegrityEnvelope, type DescriptorComponent } from "@partybeam/game-sdk/package-v1";
+const components: readonly DescriptorComponent[] = [{ kind: "tv", artifactPath: "tv.zip", sha256: "a".repeat(64) }];
+const descriptor: Uint8Array = buildPackageDescriptor("a".repeat(64), components);
+const schemaVersion: 1 = createUnsignedIntegrityEnvelope(descriptor, components).schemaVersion;
+void schemaVersion;
 const client = createGameContractV1Client();
 const session: Promise<PartyBeamSession> = client.request("session.get");
 void session;

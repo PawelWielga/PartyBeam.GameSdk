@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.0-alpha.1
+
+- Ship unchanged package-v1 manifest and integrity/signature schemas with pinned provenance.
+- Add the Node-only `package-v1` descriptor, SHA-256, safe-path and unsigned-envelope API.
+- Test Platform's independent hash vector, historical Catalog bytes and malformed inputs.
+- Keep the browser client and package/wire versions unchanged; whole-package build/check remains G04.
+
 ## 0.1.0-alpha.0
 
 - Extract Game Contract v1 native URI and browser iframe client from Reflex/Grimcellar.

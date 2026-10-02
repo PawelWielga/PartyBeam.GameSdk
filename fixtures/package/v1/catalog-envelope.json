@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "manifestSha256": "7aea021d26050b86186a80459744e2e2fb1ca8f90c2a1e428d565c0d58c79bb3",
+  "packageSha256": "19873c7bf2d1389459b923b9cc7005ad75423dfe9457a03ad0e8a3a0c01b502a",
+  "signature": {
+    "algorithm": "ecdsa-p256-sha256-p1363",
+    "keyId": "partybeam-ci-example-key",
+    "valueBase64": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+  }
+}
