@@ -41,6 +41,8 @@ Required:
 
 Do not change v1 wire/container behavior accidentally during extraction.
 
+SDK `0.1.0-alpha.1` extracts unchanged schemas, Node descriptor/hash/path primitives and Platform/Catalog fixtures. See `docs/package-contract-v1.md`. G03 remains open for real generated Reflex/Grimcellar/RacingLab package proof and a complete reusable valid/invalid fixture corpus; full archive build/check and semantic validation belong to G04.
+
 ## G04 — package builder/check CLI
 
 Provide a normal game producer workflow that replaces copied scripts.

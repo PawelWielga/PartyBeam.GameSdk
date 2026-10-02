@@ -1,0 +1,32 @@
+{
+  "schemas/game-package-manifest.v1.schema.json": {
+    "repository": "PawelWielga/PartyBeam.Platform",
+    "commit": "c30c2531f44688cda82c87e1c6d5f5be7bed837b",
+    "path": "schemas/game-package-manifest.v1.schema.json"
+  },
+  "schemas/game-package-signature-envelope.v1.schema.json": {
+    "repository": "PawelWielga/PartyBeam.Platform",
+    "commit": "c30c2531f44688cda82c87e1c6d5f5be7bed837b",
+    "path": "schemas/game-package-signature-envelope.v1.schema.json"
+  },
+  "fixtures/package/v1/platform-manifest.json": {
+    "repository": "PawelWielga/PartyBeam.Platform",
+    "commit": "c30c2531f44688cda82c87e1c6d5f5be7bed837b",
+    "path": "tests/PartyBeam.GamePackages.Tests/Fixtures/valid-manifest.json"
+  },
+  "fixtures/package/v1/platform-artwork-manifest.json": {
+    "repository": "PawelWielga/PartyBeam.Platform",
+    "commit": "c30c2531f44688cda82c87e1c6d5f5be7bed837b",
+    "path": "tests/PartyBeam.GamePackages.Tests/Fixtures/valid-manifest-with-artwork.json"
+  },
+  "fixtures/package/v1/catalog-manifest.json": {
+    "repository": "PawelWielga/PartyBeam.GameCatalog",
+    "commit": "eb1015bcbda2b45649b2a5c78b19bfa4f58e71ff",
+    "path": "fixtures/v1/package-contract/manifest.json"
+  },
+  "fixtures/package/v1/catalog-envelope.json": {
+    "repository": "PawelWielga/PartyBeam.GameCatalog",
+    "commit": "eb1015bcbda2b45649b2a5c78b19bfa4f58e71ff",
+    "path": "fixtures/v1/package-contract/signature.json"
+  }
+}

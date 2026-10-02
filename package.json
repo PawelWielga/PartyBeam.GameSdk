@@ -1,16 +1,39 @@
 {
   "name": "@partybeam/game-sdk",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "Game-facing PartyBeam Game Contract v1 client and types",
   "type": "module",
-  "engines": { "node": ">=20" },
-  "exports": { ".": { "types": "./src/index.d.ts", "import": "./src/index.js" } },
-  "files": ["src", "fixtures", "docs", "CHANGELOG.md", "README.md"],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./package-v1": {
+      "types": "./src/package-v1.d.ts",
+      "import": "./src/package-v1.js"
+    },
+    "./schemas/*": "./schemas/*",
+    "./fixtures/*": "./fixtures/*"
+  },
+  "files": [
+    "src",
+    "fixtures",
+    "docs",
+    "CHANGELOG.md",
+    "README.md",
+    "schemas"
+  ],
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "typecheck": "tsc -p tests/tsconfig.json",
     "check": "npm test && npm run typecheck",
     "prove:reflex": "node tools/prove-reflex.mjs"
   },
-  "devDependencies": { "typescript": "5.9.3" }
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "typescript": "5.9.3"
+  }
 }

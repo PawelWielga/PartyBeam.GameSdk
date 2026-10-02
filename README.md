@@ -89,7 +89,7 @@ npm run check
 npm pack
 ```
 
-The package has no runtime dependencies. Browser games bundle the ES module into their sandboxed surfaces. CI verifies Node 20/22, declarations and package contents. Package schemas/build/check tooling remain G03/G04 work; permanent game and Platform adoption remain subsequent tracked migrations.
+The package has no runtime dependencies. Browser games bundle the ES module into their sandboxed surfaces. CI verifies Node 20/22, declarations and package contents. SDK `0.1.0-alpha.1` also exports unchanged package-v1 schemas and Node descriptor/hash primitives; see [package contract and validation boundaries](docs/package-contract-v1.md). Whole-package build/check remains G04; real consumer adoption and conformance remain tracked migrations.
 
 ## Planned package shape
 
