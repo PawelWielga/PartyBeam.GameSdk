@@ -139,8 +139,26 @@ Node 25.6.1: 514 passed (Core 263, GameContract 88, GameRuntime 119, PartyGameKi
 required on PATH for both Core and GameContract tests. Platform #367 is closed;
 Actions stays paused; browser API/trusted services remain doubles.
 
-G09 remains open. Next: production schema-source cutover/removal and structural boundary
-proof beyond the finite corpus remain. No live browser/Android/device E2E,
+Platform [PR #370](https://github.com/PawelWielga/PartyBeam.Platform/pull/370),
+merge `c1654bbd46a8582d7d7488f54129e05b39e32fe6`, completes schema-source ownership
+cutover. The two root schema copies were documentation-only, with no production
+loader; canonical pinned SDK links replace them. The .NET parser/verifier remains
+Platform-owned. A test-only lockfile installs the same alpha.4 artifact and checks
+all installed implementation/schema/fixture bytes against the verified pin.
+
+Actual SDK and .NET validators agree on 205 generated manifest property/array
+boundaries. Actual SDK production and both verifiers agree on six signed/unsigned
+archives for the three pinned generated-game manifests, including required
+signatures and wrong-key rejection. Assets are synthetic and private test keys
+are ephemeral; this is not current game publication or device proof. Local Windows
+.NET 10.0.301 / Node 25.6.1: 171 GamePackages, 44 Catalog and 47 Distribution tests
+passed (262 total, zero failures/skips), builds zero warnings/errors. Offline
+lockfile install passed; audit found zero vulnerabilities. Platform #369 is closed.
+[Coordinated upgrade guidance](https://github.com/PawelWielga/PartyBeam.Platform/blob/main/docs/gamesdk-contract-upgrades.md)
+records source/version/hash identities, consumer rollout and explicit test prerequisites.
+
+G09 remains open. Next: generated envelope boundaries, further runtime method/type
+proof and the ecosystem-wide conformance matrix remain. No live browser/Android/device E2E,
 full v1 method conformance or physical performance conclusion is inferred.
 See [Platform evidence](https://github.com/PawelWielga/PartyBeam.Platform/blob/main/docs/gamesdk-conformance.md).
 
