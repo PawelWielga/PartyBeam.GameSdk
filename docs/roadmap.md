@@ -121,8 +121,25 @@ doubles are used; this is not browser/WebView/device E2E. Node >=20 on PATH is
 now an explicit Platform GameContract test prerequisite; no product dependency
 is added. Platform #365 is closed; Actions remains paused there.
 
-G09 remains open. Next: broader request/type boundaries and real controller-client
-exchange; production schema-source cutover/removal and structural boundary
+Platform [PR #368](https://github.com/PawelWielga/PartyBeam.Platform/pull/368),
+merge `ccae001a10095ebce641eb11c164b02f5507e2d4`, completes the linked controller
+exchange and expanded authoritative boundary checkpoint. The shared test-only
+process transport delivers parsed requests through the real bridge subscriptions.
+Each native/iframe mode executes seven controller requests (input and identity/
+sequence/timestamp/missing-field/TV-method rejection), canonical private
+projection with stale-attempt filtering, and 19 authoritative requests covering
+storage, projections, completion/end and malformed request/policy boundaries.
+
+The real-client storage.read assertion reproduced Platform omitting the required
+`value` property when no value existed. Platform now emits `value: null`; SDK
+alpha.4 types and all other nullable/optional fields stay unchanged. Three .NET
+regressions cover missing/stored-null/object values. Windows .NET 10.0.301 /
+Node 25.6.1: 514 passed (Core 263, GameContract 88, GameRuntime 119, PartyGameKit
+25, Tv.Web 19), zero failures/skips, builds zero warnings/errors. Node >=20 is
+required on PATH for both Core and GameContract tests. Platform #367 is closed;
+Actions stays paused; browser API/trusted services remain doubles.
+
+G09 remains open. Next: production schema-source cutover/removal and structural boundary
 proof beyond the finite corpus remain. No live browser/Android/device E2E,
 full v1 method conformance or physical performance conclusion is inferred.
 See [Platform evidence](https://github.com/PawelWielga/PartyBeam.Platform/blob/main/docs/gamesdk-conformance.md).
