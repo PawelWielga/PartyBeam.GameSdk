@@ -98,8 +98,18 @@ failures/skips. SDK optional null/omitted presence timing and bridge-lifetime
 mapping IDs are documented normalization points. No production runtime mismatch
 was found in those six checks.
 
-G09 remains open. Next: the shared controller-projection fixture through the
-controller adapter and real SDK-client/Platform exchange with broader request/type
+Platform [PR #364](https://github.com/PawelWielga/PartyBeam.Platform/pull/364),
+merge `d1988376af166f3d278c13275d559c0189384322`, completes the controller-projection
+checkpoint. The existing Android sandbox bridge is shared in Core behind a
+trusted routing port and Android uses that same implementation. The pinned SDK
+fixture passes exactly through legacy/attempt-scoped private-projection parsing
+and the real bridge with a recording transport. Stale attempts, malformed JSON,
+disposal and restricted input routing are covered. Local Windows validation:
+513 tests passed (Core 261, GameContract 83, GamePackages 169), zero failures/skips;
+Android controller Release build including trimming/AOT passed with zero
+warnings/errors. Platform #363 is closed; Actions remains paused there.
+
+G09 remains open. Next: real SDK-client/Platform exchange with broader request/type
 boundaries; production schema-source cutover/removal and structural boundary
 proof beyond the finite corpus remain. No live browser/Android/device E2E,
 full v1 method conformance or physical performance conclusion is inferred.
