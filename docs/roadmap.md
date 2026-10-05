@@ -157,8 +157,34 @@ lockfile install passed; audit found zero vulnerabilities. Platform #369 is clos
 [Coordinated upgrade guidance](https://github.com/PawelWielga/PartyBeam.Platform/blob/main/docs/gamesdk-contract-upgrades.md)
 records source/version/hash identities, consumer rollout and explicit test prerequisites.
 
-G09 remains open. Next: generated envelope boundaries, further runtime method/type
-proof and the ecosystem-wide conformance matrix remain. No live browser/Android/device E2E,
+Platform [PR #374](https://github.com/PawelWielga/PartyBeam.Platform/pull/374),
+merge `4441eafb6d3cf166f83366528c7fc17f2b502446`, completes the generated envelope
+checkpoint with [GameCatalog PR #28](https://github.com/PawelWielga/PartyBeam.GameCatalog/pull/28).
+The same 115 signed/unsigned field/type/hash/Base64/Unicode/root cases run against
+actual pinned SDK metadata, .NET verifier stages and the real Catalog projection
+gate; 13 matching projections are accepted. Artifact/fixture identity and SDK
+expectations are rechecked by Catalog; four malformed report probes fail.
+
+The pre-fix .NET test reproduced four mismatches: numeric `1.0`/`1e0` schema-version
+spellings and FEFF/NEL signing-key classification. Platform now follows the SDK
+on version fields and blank keys while retaining other numeric parsing, exact key
+lookup, canonical Base64 and trusted-crypto policy. Catalog independently
+reproduced/fixed accepting whitespace-only key IDs with aligned catalog metadata.
+Platform #373 and Catalog #27 are closed. No SDK definitions/wire/schema/pin or
+game producer versions changed; these are consumer adapter corrections.
+
+Windows .NET 10.0.301 / Node 25.6.1: all nine Platform deterministic projects
+passed (832 tests, zero failures/skips; GamePackages 182). Full solution Release
+build including Android trimming/AOT passed, zero warnings/errors. Catalog's
+offline install, full npm test and canonical catalog/channels passed. Platform
+#356 is resolved by PR #372: unsupported `--nologo` caused the zero-test result;
+standard MTP `dotnet test --project` is now documented and validated. Actions
+remains paused in Platform/Catalog; no CI or device evidence is inferred there.
+
+G09 remains open. Next: full signed/unsigned package and consumer-policy matrix,
+then further runtime method/type proof. Metadata/projection acceptance with
+synthetic signature bytes does not prove payload/crypto/publication acceptance.
+No live browser/Android/device E2E,
 full v1 method conformance or physical performance conclusion is inferred.
 See [Platform evidence](https://github.com/PawelWielga/PartyBeam.Platform/blob/main/docs/gamesdk-conformance.md).
 
