@@ -109,8 +109,20 @@ disposal and restricted input routing are covered. Local Windows validation:
 Android controller Release build including trimming/AOT passed with zero
 warnings/errors. Platform #363 is closed; Actions remains paused there.
 
-G09 remains open. Next: real SDK-client/Platform exchange with broader request/type
-boundaries; production schema-source cutover/removal and structural boundary
+Platform [PR #366](https://github.com/PawelWielga/PartyBeam.Platform/pull/366),
+merge `6738586e9ed681d1461ea35db9f0859e41d23319`, proves representative real
+SDK-client/Platform exchange. Native URI and iframe client paths execute the
+hash-verified alpha.4 JavaScript client against the actual .NET parser/bridge
+over process I/O: queued session/timing requests, invalid/unsupported errors,
+ready/fatal parsing, exact timed input/resource-pressure events and SDK disposal.
+Local Windows .NET 10.0.301 / Node 25.6.1: 85 GameContract tests passed, zero
+failures/skips, build zero warnings/errors. Browser API and trusted host-service
+doubles are used; this is not browser/WebView/device E2E. Node >=20 on PATH is
+now an explicit Platform GameContract test prerequisite; no product dependency
+is added. Platform #365 is closed; Actions remains paused there.
+
+G09 remains open. Next: broader request/type boundaries and real controller-client
+exchange; production schema-source cutover/removal and structural boundary
 proof beyond the finite corpus remain. No live browser/Android/device E2E,
 full v1 method conformance or physical performance conclusion is inferred.
 See [Platform evidence](https://github.com/PawelWielga/PartyBeam.Platform/blob/main/docs/gamesdk-conformance.md).
